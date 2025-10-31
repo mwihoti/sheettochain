@@ -1,0 +1,35 @@
+{
+  "name": "hedera-analytics-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "test:connection": "node scripts/test-connection.mjs",
+    "create:topic": "node scripts/create-hcs-topic.mjs",
+    "deploy:contract": "node scripts/deploy-contract.mjs"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.76.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "lucide-react": "^0.548.0",
+    "next": "16.0.1",
+    "papaparse": "^5.5.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-hot-toast": "^2.6.0",
+    "recharts": "^3.3.0",
+    "solc": "^0.8.30"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

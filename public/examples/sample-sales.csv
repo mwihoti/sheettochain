@@ -1,0 +1,16 @@
+date,product,quantity,price,customer_id,region,status
+2024-01-01,Widget A,10,29.99,C001,North America,completed
+2024-01-02,Widget B,5,49.99,C002,Europe,completed
+2024-01-03,Widget A,15,29.99,C003,Asia,completed
+2024-01-04,Widget C,8,79.99,C001,North America,pending
+2024-01-05,Widget B,12,49.99,C004,Europe,completed
+2024-01-06,Widget A,20,29.99,C005,Asia,completed
+2024-01-07,Widget C,3,79.99,C002,Europe,cancelled
+2024-01-08,Widget B,7,49.99,C006,North America,completed
+2024-01-09,Widget A,25,29.99,C007,Asia,completed
+2024-01-10,Widget C,11,79.99,C003,Europe,completed
+2024-01-11,Widget B,9,49.99,C008,North America,pending
+2024-01-12,Widget A,18,29.99,C009,Asia,completed
+2024-01-13,Widget C,6,79.99,C010,Europe,completed
+2024-01-14,Widget B,14,49.99,C001,North America,completed
+2024-01-15,Widget A,22,29.99,C002,Asia,completed
