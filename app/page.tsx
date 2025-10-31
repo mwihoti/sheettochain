@@ -877,9 +877,12 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-white" />
+                  <Database className="w-6 h-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Hedera Analytics Dashboard</h1>
+                <div>
+                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white">SheetToChain</h1>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hedera</p>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Link 
@@ -903,10 +906,48 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold mb-4">DLT-Enhanced Transaction Analytics</h2>
-            <p className="text-xl opacity-90">Immutable audit trails • On-chain verification • Enterprise-grade insights</p>
+            <div className="text-center mb-8">
+              <h2 className="text-5xl font-bold mb-4">SheetToChain</h2>
+              <p className="text-2xl opacity-90 mb-6">Transform Your CSV Data into Immutable Blockchain Assets</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                  <Database className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Tokenize Datasets</h3>
+                <p className="text-white/80">Upload CSV files and mint them as NFTs on Hedera Token Service. Each dataset becomes a unique, tradeable digital asset with full metadata.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Verify Integrity</h3>
+                <p className="text-white/80">SHA-256 hashes submitted to Hedera Consensus Service ensure your data hasn't been tampered with. Immutable proof of authenticity.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                  <Activity className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Track & Analyze</h3>
+                <p className="text-white/80">Monitor Hedera transactions, view account details, and explore blockchain analytics. Full DLT transparency for your data journey.</p>
+              </div>
+            </div>
+            
+            <div className="text-center mt-10">
+              <Link 
+                href="/tokenized-data"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+              >
+                <Database className="w-5 h-5" />
+                Start Tokenizing Now
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -936,12 +977,89 @@ export default function Home() {
           )} */}
 
           {!state.loading && state.transactions.length === 0 && !state.error && (
-            <div className="text-center py-20">
-              <div className="bg-gray-200 dark:bg-gray-700 border-2 border-dashed rounded-xl w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                <Search className="w-12 h-12 text-gray-400" />
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-10 border-2 border-dashed border-blue-300 dark:border-gray-700">
+                <div className="text-center mb-8">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                    <Database className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white">Welcome to SheetToChain!</h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                    The ultimate platform for tokenizing CSV datasets and analyzing Hedera blockchain transactions
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                    <h4 className="font-bold text-lg mb-3 text-gray-900 dark:text-white flex items-center gap-2">
+                      <Database className="w-5 h-5 text-purple-600" />
+                      Tokenize Your Data
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Upload CSV files (up to 10MB)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Mint as NFTs on Hedera Token Service</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Submit hash to Consensus Service for verification</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Register on smart contract for on-chain registry</span>
+                      </li>
+                    </ul>
+                    <Link 
+                      href="/tokenized-data"
+                      className="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                    >
+                      <Database className="w-4 h-4" />
+                      Start Tokenizing
+                    </Link>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                    <h4 className="font-bold text-lg mb-3 text-gray-900 dark:text-white flex items-center gap-2">
+                      <Activity className="w-5 h-5 text-blue-600" />
+                      Analyze Transactions
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Search any Hedera account by ID</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>View detailed transaction history</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Automated categorization & insights</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>Export data to CSV for analysis</span>
+                      </li>
+                    </ul>
+                    <div className="mt-4">
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Try searching for:</p>
+                      <p className="text-sm font-mono bg-gray-100 dark:bg-gray-900 px-3 py-2 rounded text-gray-900 dark:text-white">
+                        0.0.6990992
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Powered by <strong>Hedera Token Service (HTS)</strong>, <strong>Hedera Consensus Service (HCS)</strong>, and <strong>Hedera Smart Contract Service (HSCS)</strong>
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">No transactions found</h3>
-              <p className="text-gray-600 dark:text-gray-400">Enter an account ID to begin</p>
             </div>
           )}
 
